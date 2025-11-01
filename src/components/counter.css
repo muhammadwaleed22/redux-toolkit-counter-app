@@ -1,32 +1,39 @@
 /* Counter.css */
 
 .counter-container {
-  display: flex; 
-   flex-direction: column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 60vh;
   background-color: #f5f6fa;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
-
-  /* New border and layout styling */
   border: 3px solid #2f3640;
   border-radius: 15px;
   width: 550px;
-  margin: 0 auto; /* horizontally center */
+  margin: 50px auto; /* center horizontally with spacing */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: all 0.3s ease;
 }
 
+/* Headline */
 .counter-container h1 {
   font-size: 2rem;
   color: #2f3640;
   margin-bottom: 20px;
-}
-.buttonsgroup{
-    display: flex;
+  text-align: center;
 }
 
+/* Button group layout */
+.buttonsgroup {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Button styles */
 button {
   background-color: #4cd137;
   color: white;
@@ -50,4 +57,43 @@ button:nth-child(3) {
 
 button:nth-child(3):hover {
   background-color: #c23616;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .counter-container {
+    width: 80%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .counter-container h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-container {
+    width: 90%;
+    border-width: 2px;
+  }
+
+  .counter-container h1 {
+    font-size: 1.3rem;
+  }
+
+  .buttonsgroup {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
 }
