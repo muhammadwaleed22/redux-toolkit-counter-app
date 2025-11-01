@@ -25,8 +25,6 @@ I built a simple **Counter Application** to understand how Redux Toolkit simplif
 - JavaScript (ES6+)
 - CSS3
 
----
-
 ## 📂 Folder Structure
 
 src/
